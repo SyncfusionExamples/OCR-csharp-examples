@@ -1,0 +1,61 @@
+﻿@page "/fetchdata"
+
+@using Perform_OCR_Blazor.Data
+@inject WeatherForecastService ForecastService
+@inject ExportService exportService
+@inject Microsoft.JSInterop.IJSRuntime JS
+@using  System.IO;
+
+<h1>Weather forecast</h1>
+<button class="btn btn-primary" @onclick="@PerformOCR">Perform OCR</button>
+<p>This component demonstrates fetching data from a service.</p>
+
+@functions
+{
+    protected async Task PerformOCR()
+    {
+        ExportService exportService = new ExportService();
+        using (MemoryStream excelStream = exportService.CreatePdf())
+        {
+            await JS.SaveAs("Output.pdf", excelStream.ToArray());
+        }
+    }
+}
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WeatherForecast[] forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+    }
+}
