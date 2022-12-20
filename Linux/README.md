@@ -1,11 +1,3 @@
----
-title: Perform OCR on PDF and image files in Linux | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images in Linux with different tesseract version using Syncfusion .NET OCR library.
-control: PDF
-documentation: UG
-keywords: Assemblies
----
-
 # Perform OCR in Linux
 
 The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
