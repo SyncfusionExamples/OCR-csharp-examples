@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Html.BeginForm("PerformOCR", "Home", FormMethod.Post);
+    {
+        <div>
+            <input type="submit" value="Perform OCR" style="width:150px;height:27px" />
+        </div>
+    }
+    Html.EndForm();
+}
