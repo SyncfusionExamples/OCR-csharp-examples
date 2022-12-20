@@ -7,7 +7,7 @@ The Syncfusion .NET OCR library used to extract text from scanned PDFs and image
 ## Steps to perform OCR on entire PDF document in Blazor application
 
 1. Create a new C# Blazor Server application project. Select Blazor App from the template and click the Next button.
-   <img src="OCR-Images/ocr_images/blazor_step1.png" alt="Blazor_step1" width="100%" Height="Auto"/>
+     <img src="Perform_OCR_Blazor/ocr_images/blazor_step1.png" alt="Blazor_step1" width="100%" Height="Auto"/>
 
    In the project configuration window, name your project and select Create.
    <img src="Perform_OCR_Blazor/ocr_images/blazor_step2.png" alt="Blazor_step2" width="100%" Height="Auto"/>
