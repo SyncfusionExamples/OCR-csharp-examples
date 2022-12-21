@@ -1,7 +1,6 @@
 # Perform OCR in Linux
 
-The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
-
+The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images in the Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 ## Pre-requisites
 
 The following Linux dependencies should be installed where the conversion takes place. 
@@ -15,7 +14,7 @@ The following Linux dependencies should be installed where the conversion takes 
 {% endhighlight %}
 
 
-## Steps to convert HTML to PDF in .NET Core application on Linux
+## Steps to convert HTML to PDF in .NET Core application on Linux.
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 
@@ -45,7 +44,7 @@ OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
 
 {% endhighlight %}
 
-Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following this link,[Tesseract language data](https://github.com/tesseract-ocr/tessdata).
+Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link [Tesseract language data](https://github.com/tesseract-ocr/tessdata).
 
 {% highlight c# tabtitle="C#" %}
 
@@ -64,7 +63,7 @@ using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
 
-Step 6:  Add code samples in Program.cs file.
+Step 6:  Add code samples to Program.cs file.
 
 {% highlight c# tabtitle="C#" %}
  
