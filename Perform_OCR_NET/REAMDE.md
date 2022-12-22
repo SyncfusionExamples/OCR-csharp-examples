@@ -3,7 +3,7 @@
 # Perform OCR in .NET  
 The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in .NET application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
-#### Steps to perform OCR on an entire PDF document in a .NET application 
+## Steps to perform OCR on an entire PDF document in a .NET application 
 
 Step 1: Create a new .NET console application. 
 <img src="Perform_OCR_NET/OCR_Images/OCR-NET-step1.png" alt="Create .NET console Step1" width="100%" Height="Auto"/>
