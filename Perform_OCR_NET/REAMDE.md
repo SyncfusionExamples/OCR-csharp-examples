@@ -18,7 +18,7 @@ Step 3: Tesseract assemblies are not added as a reference. They must be kept in 
 
 ```csharp
 
-OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
+OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/")
 
 ```
 
@@ -27,7 +27,7 @@ Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local sys
 
 ```csharp
 
-OCRProcessor processor = new OCRProcessor("Tesseractbinaries\");
+OCRProcessor processor = new OCRProcessor("Tesseractbinaries/");
 processor.PerformOCR(loadedDocument, "tessdata/");
 
 ```
@@ -56,7 +56,7 @@ using (OCRProcessor processor = new OCRProcessor("TesseractBinaries/Windows/"))
     processor.Settings.Language = Languages.English;
 
     //Process OCR by providing the PDF document and Tesseract data.
-    processor.PerformOCR(pdfLoadedDocument, "TessData/"));
+    processor.PerformOCR(pdfLoadedDocument, "TessData/");
 
     //Create file stream.
     using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
