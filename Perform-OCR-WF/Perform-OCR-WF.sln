@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perform-OCR-WF", "Perform-OCR-WF\Perform-OCR-WF.csproj", "{4C5E2B09-1214-4E46-97A1-C595B5D0F3DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C5E2B09-1214-4E46-97A1-C595B5D0F3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5E2B09-1214-4E46-97A1-C595B5D0F3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5E2B09-1214-4E46-97A1-C595B5D0F3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5E2B09-1214-4E46-97A1-C595B5D0F3DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DB53BD4-7C7C-49CC-BA94-4CC0BEAF4425}
+	EndGlobalSection
+EndGlobal
