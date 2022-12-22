@@ -3,23 +3,23 @@
 The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) supports external engines (Azure Computer Vision) to process the OCR on images and PDF documents. 
 
 ## Steps to perform OCR with Azure Computer Vision 
-1. Create a new .NET Console application project. 
+Step 1: Create a new .NET Console application project. 
 <img src="Perform-OCR-Azure-Vision/OCR_Images/.NET-sample-creation-step1.png" alt=".NET-sample-creation-step1" width="100%" Height="Auto"/>
 <img src="Perform-OCR-Azure-Vision/OCR_Images/.NET-sample-creation-step2.png" alt=".NET-sample-creation-step2" width="100%" Height="Auto"/>
 
-2. Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) and [Microsoft.Azure.CognitiveServices.Vision.ComputerVision](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision) NuGet packages as reference to your .NET application from [nuget.org](https://www.nuget.org/). 
+Step 2: Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) and [Microsoft.Azure.CognitiveServices.Vision.ComputerVision](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision) NuGet packages as reference to your .NET application from [nuget.org](https://www.nuget.org/). 
 
 <img src="Perform-OCR-Azure-Vision/OCR_Images/.NET-sample-creation-step3.png" alt=".NET-sample-creation-step3" width="100%" Height="Auto"/>
 <img src="Perform-OCR-Azure-Vision/OCR_Images/.NET-sample-creation-step4.png" alt=".NET-sample-creation-step4" width="100%" Height="Auto"/>
 
-3. Include the following namespaces in the [Program.cs](Perform-OCR-Azure-Vision/Program.cs) file. 
+Step 3: Include the following namespaces in the [Program.cs](Perform-OCR-Azure-Vision/Program.cs) file. 
 
 ```csharp
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 ``` 
 
-4. Use the following code sample to perform OCR on PDF document with Azure Vision in the [Program.cs](Perform-OCR-Azure-Vision/Program.cs) file. 
+Step 4: Use the following code sample to perform OCR on PDF document with Azure Vision in the [Program.cs](Perform-OCR-Azure-Vision/Program.cs) file. 
 
 ```csharp
 
@@ -56,9 +56,9 @@ using (OCRProcessor processor = new OCRProcessor())
 
 ``` 
 
-5. Create a new class named [AzureExternalOcrEngine](Perform-OCR-Azure-Vision/AzureExternalOcrEngine.cs) to get the image stream from PerformOCR method and process the image stream with an external engine. It returns the OCRLayoutResult for the image. 
+Step 5: Create a new class named [AzureExternalOcrEngine](Perform-OCR-Azure-Vision/AzureExternalOcrEngine.cs) to get the image stream from PerformOCR method and process the image stream with an external engine. It returns the OCRLayoutResult for the image. 
 
-N> Provide a valid subscription key and endpoint to work with Azure computer vision.
+> Provide a valid subscription key and endpoint to work with Azure computer vision.
 
 ```csharp
 

@@ -17,44 +17,44 @@ Step 2: Install the [Syncfusion.Pdf.OCR.Wpf](https://www.nuget.org/packages/Sync
 
 Step 3: Add a new button in [MainWindow.xaml](Perform_OCR_WPF/MainWindow.xaml) to perform OCR as follows.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 <Grid>
     <Button Content="Perform OCR" HorizontalAlignment="Left" Margin="279,178,0,0" VerticalAlignment="Top" Height="68" Width="203" Click="Button_Click"/>
 </Grid>
 
-{% endhighlight %}
+```
 
 Step 4: Include the following namespaces in the [MainWindow.xaml.cs](Perform_OCR_WPF/MainWindow.xaml.cs) file.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
-{% endhighlight %}
+```
 
 Step 5: Tesseract assemblies are not added as a reference. They must be kept in the local machine, and the location of the assemblies is passed as a parameter to the OCR processor.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
 
-{% endhighlight %}
+```
 
 Step 6: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link,
 [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor("Tesseractbinaries\");
 processor.PerformOCR(loadedDocument, "tessdata/");
 
-{% endhighlight %}
+```
 
 Step 6: Add the following code in Button_Click to perform OCR on the entire PDF document. 
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll).
 using (OCRProcessor processor = new OCRProcessor(@"../../TesseractBinaries/4.0/x86"))
@@ -78,7 +78,7 @@ using (OCRProcessor processor = new OCRProcessor(@"../../TesseractBinaries/4.0/x
 //This will open the PDF file so, the result will be seen in default PDF viewer.
 Process.Start("OCR.pdf");
 
-{% endhighlight %}
+```
 
 By executing the program, you will get the PDF document as follows. 
 <img src="Perform_OCR_WPF/OCR_Images/Output.png" alt="Output document screenshot" width="100%" Height="Auto"/>

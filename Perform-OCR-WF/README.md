@@ -1,7 +1,7 @@
 ##### Example: Windows Forms
 
 # Perform OCR in Windows 
-The Syncfusion .NET OCR library used to extract text from scanned PDFs, and images in Windows Forms application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs, and images in Windows Forms application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
 ## Steps to perform OCR on entire PDF document in Windows Forms 
 
@@ -16,25 +16,25 @@ Step 2: Install the [Syncfusion.Pdf.OCR.WinForms](https://www.nuget.org/packages
 
 Step 3: Tesseract assemblies are not added as a reference. They must be kept in the local machine, and the location of the assemblies is passed as a parameter to the OCR processor.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
 
-{% endhighlight %}
+``` 
 
 Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link,
 [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor("Tesseractbinaries\");
 processor.PerformOCR(loadedDocument, "tessdata/");
 
-{% endhighlight %}
+``` 
 
 Step 5: Add a new button in [Form1.Designer.cs](Perform-OCR-WF/Form1.Designer.cs) file. 
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 private System.Windows.Forms.Button button1;
 
@@ -64,20 +64,20 @@ private void InitializeComponent()
     this.ResumeLayout(false);
 }
 
-{% endhighlight %}
+``` 
 
 Step 6: Include the following namespaces in the [Form1.cs](Perform-OCR-WF/Form1.cs) file.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
-{% endhighlight %}
+```
 
 Step 7: Create the btnCreate_Click event and add the following code to perform OCR on entire PDF document. 
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll)
 using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/"))
@@ -99,7 +99,7 @@ using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/"))
     loadedDocument.Close(true);
 }
 
-{% endhighlight %}
+```
 
 By executing the program, you will get the PDF document as follows.
 <img src="Perform-OCR-WF/OCR_Images/Output.png" alt="Output screenshot" width="100%" Height="Auto"/>

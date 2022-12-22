@@ -16,34 +16,34 @@ Step 2: Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusi
 
 Step 3: Tesseract assemblies are not added as a reference. They must be kept in the local machine, and the location of the assemblies is passed as a parameter to the OCR processor.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
 
-{% endhighlight %}
+```
 
 Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link,
 [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor("Tesseractbinaries\");
 processor.PerformOCR(loadedDocument, "tessdata/");
 
-{% endhighlight %}
+```
 
 Step 5: Include the following namespace in your class file. 
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
-{% endhighlight %}
+```
 
 Step 6: Use the following code sample to perform OCR on the entire PDF document in the [Program.cs](Perform_OCR_NET/Program.cs). 
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 //Initialize the OCR processor by providing the path of tesseract binaries.
 using (OCRProcessor processor = new OCRProcessor("TesseractBinaries/Windows/"))
@@ -69,7 +69,7 @@ using (OCRProcessor processor = new OCRProcessor("TesseractBinaries/Windows/"))
     pdfLoadedDocument.Close(true);
 }
 
-{% endhighlight %}
+```
 
 By executing the program, you will get a PDF document as follows.
 <img src="Perform_OCR_NET/OCR_Images/Output.png" alt="Output screenshot" width="100%" Height="Auto"/>
