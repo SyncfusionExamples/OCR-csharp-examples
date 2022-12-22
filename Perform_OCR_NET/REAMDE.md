@@ -1,7 +1,7 @@
 ##### Example: .NET 
 
 # Perform OCR in .NET  
-The Syncfusion .NET OCR library used to extract text from scanned PDFs and images in .NET application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in .NET application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
 #### Steps to perform OCR on an entire PDF document in a .NET application 
 
@@ -22,7 +22,8 @@ OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/")
 
 ```
 
-Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link,
+Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link.
+
 [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
 ```csharp
