@@ -23,6 +23,7 @@ OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
 ``` 
 
 Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link,
+
 [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
 ```csharp
