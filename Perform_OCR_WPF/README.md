@@ -42,7 +42,8 @@ OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/")
 
 ```
 
-Step 6: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link,
+Step 6: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link.
+
 [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
 ```csharp
@@ -57,10 +58,10 @@ Step 6: Add the following code in Button_Click to perform OCR on the entire PDF 
 ```csharp
 
 //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll).
-using (OCRProcessor processor = new OCRProcessor(@"../../TesseractBinaries/4.0/x86"))
+using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/"))
 {
     //Load an existing PDF document.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("../../Data/Input.pdf");
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
     //Set the tesseract version.
     processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
@@ -69,7 +70,7 @@ using (OCRProcessor processor = new OCRProcessor(@"../../TesseractBinaries/4.0/x
     processor.Settings.Language = Languages.English;
 
     //Process OCR by providing the PDF document and Tesseract data.
-    processor.PerformOCR(loadedDocument, @"../../Tessdata/");
+    processor.PerformOCR(loadedDocument, @"Tessdata/");
 
     //Save the OCR processed PDF document in the disk.
     loadedDocument.Save("OCR.pdf");

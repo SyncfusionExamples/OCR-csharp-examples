@@ -3,6 +3,7 @@ using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Perform_OCR_WPF
 {
@@ -23,6 +23,10 @@ namespace Perform_OCR_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        string tesseractBinariesPath = Path.GetFullPath("../../../../Data/.NET-Framework/Tesseractbinaries/4.0/x86");
+        string tessdataPath = Path.GetFullPath("../../../../Data/Tessdata");
+        string inputFilePath = Path.GetFullPath("../../../../Data/Input.pdf");
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,10 +35,10 @@ namespace Perform_OCR_WPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll)
-            using (OCRProcessor processor = new OCRProcessor(@"../../TesseractBinaries/4.0/x86"))
+            using (OCRProcessor processor = new OCRProcessor(tesseractBinariesPath))
             {
                 //Load an existing PDF document.
-                PdfLoadedDocument loadedDocument = new PdfLoadedDocument("../../Data/Input.pdf");
+                PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFilePath);
 
                 //Set the tesseract version 
                 processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
@@ -43,7 +47,7 @@ namespace Perform_OCR_WPF
                 processor.Settings.Language = Languages.English;
 
                 //Process OCR by providing the PDF document and Tesseract data.
-                processor.PerformOCR(loadedDocument, @"../../Tessdata/");
+                processor.PerformOCR(loadedDocument, tessdataPath);
 
                 //Save the OCR processed PDF document in the disk.
                 loadedDocument.Save("OCR.pdf");
