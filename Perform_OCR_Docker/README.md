@@ -19,17 +19,17 @@ Step 5: Tesseract assemblies are not added as a reference. They must be kept in 
 
 ```csharp
 
-OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
+OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/")
 
 ```
 
 Step 6: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following this link.
 
-[Tesseract language data](https://github.com/tesseract-ocr/tessdata).
+[Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
 ```csharp
 
-OCRProcessor processor = new OCRProcessor("Tesseractbinaries\");
+OCRProcessor processor = new OCRProcessor("Tesseractbinaries/");
 processor.PerformOCR(loadedDocument, "tessdata/");
 
 ```
@@ -48,7 +48,7 @@ libgdiplus libc6-dev
 
 Step 8: A default action method named Index will be present in the HomeController.cs. Right-click on the Index method and select Go to View, where you will be directed to its associated view page Index.cshtml.
 
-Step 9: Add a new button in the index.cshtml as follows.
+Step 9: Add a new button in the [Index.cshtml](Perform_OCR_Docker/Views/Home/Index.cshtml) as follows.
 
 ```csharp
 
@@ -65,7 +65,7 @@ Step 9: Add a new button in the index.cshtml as follows.
 
 <img src="Perform_OCR_Docker/Images/OCRDocker6.png" alt="OCR Docker Step6" width="100%" Height="Auto"/>
 
-Step 10: A default controller with the name HomeController.cs gets added to the creation of the ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
+Step 10: A default controller with the name HomeController.cs gets added to the creation of the ASP.NET Core project. Include the following namespaces in that [HomeController.cs](Perform_OCR_Docker/Controllers/HomeController.cs) file.
 
 ```csharp
 
@@ -74,7 +74,7 @@ using Syncfusion.Pdf.Parsing;
 
 ```
 
-Step 11: Add a new action method PerformOCR in the HomeController.cs, and include the code sample to perform OCR in a PDF file and download it.
+Step 11: Add a new action method PerformOCR in the [HomeController.cs](Perform_OCR_Docker/Controllers/HomeController.cs) and include the code sample to perform OCR in a PDF file and download it.
 
 ```csharp
 
