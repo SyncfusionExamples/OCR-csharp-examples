@@ -2,8 +2,8 @@
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
-string path = ("Tesseractbinaries/Linux/");
-string docPath = ("input.pdf");
+string path = ("../../Data/.NET-Core/Tesseractbinaries/Linux/");
+string docPath = ("../../Data/Input.pdf");
 
 //Initialize the OCR processor
 using (OCRProcessor processor = new OCRProcessor(path))
@@ -15,7 +15,7 @@ using (OCRProcessor processor = new OCRProcessor(path))
     //Language to process the OCR
     processor.Settings.Language = Languages.English;
     //Process OCR by providing loaded PDF document, Data dictionary and language
-    processor.PerformOCR(lDoc, ("tessdata/"));
+    processor.PerformOCR(lDoc, ("../../Data/Tessdata/"));
 
     //Save the OCR processed PDF document in the disk
     MemoryStream streamData = new MemoryStream();
