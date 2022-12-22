@@ -1,6 +1,7 @@
 # Perform OCR in Docker
 
 The [Syncfusion .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from the scanned PDFs and images in the Docker application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+
 ## Steps to perform OCR on entire PDF document in Docker
 Step 1: Create a new ASP.NET Core application project.
 <img src="Perform_OCR_Docker/Images/OCRDocker1.png" alt="OCR Docker Step1" width="100%" Height="Auto"/>
@@ -16,30 +17,32 @@ Step 4: Install the [Syncfusion.PDF.OCR.Net](https://www.nuget.org/packages/Sync
 
 Step 5: Tesseract assemblies are not added as a reference. They must be kept in the local machine, and the location of the assemblies is passed as a parameter to the OCR processor.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\")
 
-{% endhighlight %}
+```
 
-Step 6: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following this link,[Tesseract language data](https://github.com/tesseract-ocr/tessdata).
+Step 6: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following this link.
 
-{% highlight c# tabtitle="C#" %}
+[Tesseract language data](https://github.com/tesseract-ocr/tessdata).
+
+```csharp
 
 OCRProcessor processor = new OCRProcessor("Tesseractbinaries\");
 processor.PerformOCR(loadedDocument, "tessdata/");
 
-{% endhighlight %}
+```
 
 Step 7: Include the following commands in the Docker file to install the dependent packages in the docker container.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends \
 libgdiplus libc6-dev
 
-{% endhighlight %}
+```
 
 <img src="Perform_OCR_Docker/Images/OCRDocker5.png" alt="OCR Docker Step5" width="100%" Height="Auto"/>
 
@@ -47,7 +50,7 @@ Step 8: A default action method named Index will be present in the HomeControlle
 
 Step 9: Add a new button in the index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 @{Html.BeginForm("PerformOCR", "Home", FormMethod.Get);
     {
@@ -58,22 +61,22 @@ Step 9: Add a new button in the index.cshtml as follows.
     Html.EndForm();
 }
 
-{% endhighlight %}
+```
 
 <img src="Perform_OCR_Docker/Images/OCRDocker6.png" alt="OCR Docker Step6" width="100%" Height="Auto"/>
 
 Step 10: A default controller with the name HomeController.cs gets added to the creation of the ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
-{% endhighlight %}
+```
 
 Step 11: Add a new action method PerformOCR in the HomeController.cs, and include the code sample to perform OCR in a PDF file and download it.
 
-{% highlight c# tabtitle="C#" %}
+```csharp
 
 public ActionResult PerformOCR()
 {
@@ -104,7 +107,7 @@ public ActionResult PerformOCR()
     }
 }
 
-{% endhighlight %}
+```
 
 Step 12: Build and run the sample in Docker. It will pull the Linux Docker image from the Docker hub and run the project. Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF.
 
