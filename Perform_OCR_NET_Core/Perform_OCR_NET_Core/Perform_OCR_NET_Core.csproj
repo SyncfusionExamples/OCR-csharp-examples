@@ -5,7 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.PDF.OCR.NET" Version="20.3.0.61" />
+    <PackageReference Include="Syncfusion.PDF.OCR.NET" Version="20.4.0.38" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\Data\input.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Data\tessdata\eng.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Data\Tesseractbinaries\Windows\x64\leptonica-1.80.0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Data\Tesseractbinaries\Windows\x64\libSyncfusionTesseract.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Data\Tesseractbinaries\Windows\x86\leptonica-1.80.0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Data\Tesseractbinaries\Windows\x86\libSyncfusionTesseract.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
