@@ -34,18 +34,16 @@ namespace Perform_OCR_Azure_App_Services.Controllers
         }
         public IActionResult PerformOCR()
         {
-            //Initialize the OCR processor with tesseract binaries folder path
-            string binaries = Path.Combine(_hostingEnvironment.ContentRootPath, "Tesseractbinaries", "Windows");
+            string binaries = Path.GetFullPath("../../../Data/.NET-Core/Tesseractbinaries/Windows");
+            //Initialize the OCR processor with tesseract binaries folder path.
             OCRProcessor processor = new OCRProcessor(binaries);
-            //Set custom temp file path location
-            processor.Settings.TempFolder = Path.Combine(_hostingEnvironment.ContentRootPath, "Data");
-            //Load a PDF document
-            FileStream stream1 = new FileStream(Path.Combine(_hostingEnvironment.ContentRootPath, "Data", "Input.pdf"), FileMode.Open);
+            //Load a PDF document.
+            FileStream stream1 = new FileStream(Path.GetFullPath("../../../Data/Input.pdf"), FileMode.Open);
             PdfLoadedDocument lDoc = new PdfLoadedDocument(stream1);
-            //Set OCR language to process
+            //Set OCR language to process.
             processor.Settings.Language = Languages.English;
-            //Perform OCR with input document and tessdata (Language packs)
-            string tessdataPath = Path.Combine(_hostingEnvironment.ContentRootPath, "tessdata");
+            //Perform OCR with input document and tessdata (Language packs).
+            string tessdataPath = Path.GetFullPath("../../../Data/Tessdata");
             string ocr = processor.PerformOCR(lDoc, tessdataPath);
             //Save the document. 
             MemoryStream stream = new MemoryStream();

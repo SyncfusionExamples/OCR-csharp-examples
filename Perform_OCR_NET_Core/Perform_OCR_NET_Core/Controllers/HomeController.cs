@@ -22,27 +22,27 @@ namespace Perform_OCR_NET_Core.Controllers
         }
         public IActionResult PerformOCR()
         {
-            string docPath = _hostingEnvironment.WebRootPath + "/Data/Input.pdf";
-            string tesseractPath = _hostingEnvironment.WebRootPath + "/Data/Tesseractbinaries/Windows";
-            //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll)
+            string tesseractPath = Path.GetFullPath("../../Data/.NET-Core/Tesseractbinaries/Windows");
+            string docPath = Path.GetFullPath("../../Data/Input.pdf");
+            //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll).
             using (OCRProcessor processor = new OCRProcessor(tesseractPath))
             {
                 FileStream fileStream = new FileStream(docPath, FileMode.Open, FileAccess.Read);
-                //Load a PDF document
+                //Load a PDF document.
                 PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
                 //Set OCR language to process.
                 processor.Settings.Language = Languages.English;
-                string tessdataPath = _hostingEnvironment.WebRootPath + "/Data/tessdata";
-                //Process OCR by providing the PDF document and Tesseract data
+                string tessdataPath = Path.GetFullPath("../../Data/Tessdata");
+                //Process OCR by providing the PDF document and Tesseract data.
                 processor.PerformOCR(lDoc, tessdataPath);
-                //Create memory stream
+                //Create memory stream.
                 MemoryStream stream = new MemoryStream();
-                //Save the document to memory stream
+                //Save the document to memory stream.
                 lDoc.Save(stream);
                 lDoc.Close();
                 //Set the position as '0'
                 stream.Position = 0;
-                //Download the PDF document in the browser
+                //Download the PDF document in the browser.
                 FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
                 fileStreamResult.FileDownloadName = "Sample.pdf";
                 return fileStreamResult;

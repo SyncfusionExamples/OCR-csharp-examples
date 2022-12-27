@@ -29,11 +29,11 @@ namespace Perform_OCR_Azure_Functions
                 string path = Path.GetFullPath(Path.Combine(executionContext.FunctionAppDirectory, "bin\\Tesseractbinaries\\Windows"));
                 OCRProcessor processor = new OCRProcessor(path);
                 FileStream stream = new FileStream(Path.Combine(executionContext.FunctionAppDirectory, "Data", "Input.pdf"), FileMode.Open);
-                //Load a PDF document
+                //Load a PDF document.
                 PdfLoadedDocument lDoc = new PdfLoadedDocument(stream);
-                //Set OCR language to process
+                //Set OCR language to process.
                 processor.Settings.Language = Languages.English;
-                //Perform OCR with input document and tessdata (Language packs)
+                //Perform OCR with input document and tessdata (Language packs).
                 string ocr = processor.PerformOCR(lDoc, Path.Combine(executionContext.FunctionAppDirectory, "tessdata"));
                 //Save the PDF document  
                 lDoc.Save(ms);
@@ -41,17 +41,17 @@ namespace Perform_OCR_Azure_Functions
             }
             catch (Exception ex)
             {
-                //Add a page to the document
+                //Add a page to the document.
                 PdfDocument document = new PdfDocument();
                 PdfPage page = document.Pages.Add();
-                //Create PDF graphics for the page
+                //Create PDF graphics for the page.
                 PdfGraphics graphics = page.Graphics;
-                //Set the standard font
+                //Set the standard font.
                 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 6);
-                //Draw the text
+                //Draw the text.
                 graphics.DrawString(ex.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
                 ms = new MemoryStream();
-                //Save the PDF document  
+                //Save the PDF document.  
                 document.Save(ms);
             }
             HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
