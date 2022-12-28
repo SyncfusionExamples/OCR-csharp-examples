@@ -86,7 +86,7 @@ Step 2: Create a new profile in the publish target window.
 <img src="Perform_OCR_Azure_App_Services/ocr_images/azure_step6.png" alt="Convert OCR Azure NetCore Step6" width="100%" Height="Auto"/>
 <img src="Perform_OCR_Azure_App_Services/ocr_images/azure_step7.png" alt="Convert OCR Azure NetCore Step7" width="100%" Height="Auto"/> 
 
-Step 3: Create an App service using an Azure subscription and select a hosting plan.
+Step 3: Create an App service using an Azure subscription and select a hosting plan based on the environment.
 <img src="Perform_OCR_Azure_App_Services/ocr_images/azure_step8.png" alt="Convert OCR Azure NetCore Step8" width="100%" Height="Auto"/> 
 
 Step 4: Configure the Hosting plan.
@@ -95,6 +95,6 @@ Step 4: Configure the Hosting plan.
 Step 5: After creating a profile, click Publish.
 <img src="Perform_OCR_Azure_App_Services/ocr_images/azure_step10.png" alt="Convert OCR Azure NetCore Step10" width="100%" Height="Auto"/> 
 
-Now, the published webpage will open in the browser. Perform OCR for a PDF document.
+Now, the published webpage will open in the browser, then click the **Perform OCR** button then perform OCR on a PDF document.
 <img src="Perform_OCR_Azure_App_Services/ocr_images/azure_step11.png" alt="Convert OCR Azure NetCore Step11" width="100%" Height="Auto"/>
 <img src="Perform_OCR_Azure_App_Services/ocr_images/OCR-output-image.png" alt="Convert OCR Azure NetCore Step11" width="100%" Height="Auto"/> 
