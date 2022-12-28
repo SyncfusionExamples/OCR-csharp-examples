@@ -57,12 +57,6 @@ using Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 Step 8: Add a new action method named PerformOCR in the [HomeController.cs](Perform_OCR_Azure_App_Services/Controllers/HomeController.cs) file and use the following code sample to perform OCR in the ASP.NET MVC application.
 
 ```csharp
-//To get content root path of the project.
-private readonly IHostingEnvironment _hostingEnvironment;
-public HomeController(IHostingEnvironment hostingEnvironment)
-{
-   _hostingEnvironment = hostingEnvironment;
-}
 public IActionResult PerformOCR()
 {
    //Initialize the OCR processor with tesseract binaries folder path.
