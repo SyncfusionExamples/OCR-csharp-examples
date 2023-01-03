@@ -1,5 +1,5 @@
 # OCR-csharp-examples
-The Syncfusion .NET Optical Character Recognition (OCR) library is used to extract text from scanned PDFs and images. With a few lines of C# code, a scanned PDF document containing a raster image is converted into a searchable and selectable PDF document. This repository contains examples of OCR using C# in different platforms. 
+The [Syncfusion .NET Optical Character Recognition (OCR) library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images. With a few lines of C# code, a scanned PDF document containing a raster image is converted into a searchable and selectable PDF document. This repository contains examples of OCR using C# in different platforms. 
 
 Platform Name | Description 
 --- | ---
