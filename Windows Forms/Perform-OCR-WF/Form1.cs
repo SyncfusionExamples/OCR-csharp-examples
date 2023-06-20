@@ -16,8 +16,6 @@ namespace Perform_OCR_WF
 {
     public partial class Form1 : Form
     {
-        string tesseractBinariesPath = Path.GetFullPath("../../../../Data/.NET-Framework/TesseractBinaries/4.0/x86");
-        string tessdataPath = Path.GetFullPath("../../../../Data/Tessdata/");
         string inputFilePath = Path.GetFullPath("../../../../Data/Input.pdf");
 
         public Form1()
@@ -28,7 +26,7 @@ namespace Perform_OCR_WF
         private void btnCreate_Click(object sender, EventArgs e)
         {
             //Initialize the OCR processor by providing the path of tesseract binaries.
-            using (OCRProcessor processor = new OCRProcessor(tesseractBinariesPath))
+            using (OCRProcessor processor = new OCRProcessor())
             {
                 //Load an existing PDF document.
                 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFilePath);
@@ -40,7 +38,7 @@ namespace Perform_OCR_WF
                 processor.Settings.Language = Languages.English;
 
                 //Process OCR by providing the PDF document and Tesseract data.
-                processor.PerformOCR(loadedDocument, tessdataPath);
+                processor.PerformOCR(loadedDocument);
                     
                 //Save the OCR processed PDF document in the disk.
                 loadedDocument.Save("OCR.pdf");

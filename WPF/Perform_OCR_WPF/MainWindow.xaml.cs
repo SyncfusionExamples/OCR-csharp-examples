@@ -23,8 +23,6 @@ namespace Perform_OCR_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        string tesseractBinariesPath = Path.GetFullPath("../../../../Data/.NET-Framework/Tesseractbinaries/4.0/x86");
-        string tessdataPath = Path.GetFullPath("../../../../Data/Tessdata");
         string inputFilePath = Path.GetFullPath("../../../../Data/Input.pdf");
 
         public MainWindow()
@@ -35,7 +33,7 @@ namespace Perform_OCR_WPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll)
-            using (OCRProcessor processor = new OCRProcessor(tesseractBinariesPath))
+            using (OCRProcessor processor = new OCRProcessor())
             {
                 //Load an existing PDF document.
                 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFilePath);
@@ -47,7 +45,7 @@ namespace Perform_OCR_WPF
                 processor.Settings.Language = Languages.English;
 
                 //Process OCR by providing the PDF document and Tesseract data.
-                processor.PerformOCR(loadedDocument, tessdataPath);
+                processor.PerformOCR(loadedDocument);
 
                 //Save the OCR processed PDF document in the disk.
                 loadedDocument.Save("OCR.pdf");
