@@ -37,18 +37,16 @@ namespace Perform_OCR_MVC.Controllers
             string inputFilePath = Server.MapPath("~/Input.pdf/");
             string path = inputFilePath.Replace("Perform_OCR_MVC\\Perform_OCR_MVC\\Input.pdf\\", "");
             Stream fileStream = new FileStream(path + "Data\\Input.pdf", FileMode.Open, FileAccess.Read, FileShare.Read);
-            string tesseract = path + "Data\\.NET-Framework\\TesseractBinaries\\3.05\\x86\\";
             //Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll).
-            using (OCRProcessor processor = new OCRProcessor(tesseract))
+            using (OCRProcessor processor = new OCRProcessor())
             {
                 //Load a PDF document.
                 PdfLoadedDocument lDoc = new PdfLoadedDocument(fileStream);
                 //Set OCR language to process.
                 processor.Settings.Language = Languages.English;
-                processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
-                string tessData = path + "Data\\Tessdata\\";                
+                processor.Settings.TesseractVersion = TesseractVersion.Version3_05;           
                 //Process OCR by providing the PDF document and Tesseract data.
-                processor.PerformOCR(lDoc, tessData);
+                processor.PerformOCR(lDoc);
                 //Open the document in browser after saving it.
                 lDoc.Save("Output.pdf", HttpContext.ApplicationInstance.Response, Syncfusion.Pdf.HttpReadType.Save);
                 //Close the document.
