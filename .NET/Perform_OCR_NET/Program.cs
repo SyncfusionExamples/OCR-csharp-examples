@@ -5,7 +5,7 @@ using Syncfusion.Pdf.Parsing;
 
 string inputFilePath = Path.GetFullPath("../../../../../Data/Input.pdf");
 
-//Initialize the OCR processor by providing the path of tesseract binaries(SyncfusionTesseract.dll and liblept168.dll).
+//Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
@@ -15,7 +15,7 @@ using (OCRProcessor processor = new OCRProcessor())
     //Set OCR language to process.
     processor.Settings.Language = Languages.English;
 
-    //Process OCR by providing the PDF document and Tesseract data.
+    //Process OCR by providing the PDF document.
     processor.PerformOCR(pdfLoadedDocument);
 
     //Create file stream.

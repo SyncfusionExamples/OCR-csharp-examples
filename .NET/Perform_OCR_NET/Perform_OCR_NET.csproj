@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.PDF.OCR.NET" Version="20.3.0.61" />
+    <PackageReference Include="Syncfusion.PDF.OCR.NET" Version="22.1.38" />
   </ItemGroup>
 
 </Project>
