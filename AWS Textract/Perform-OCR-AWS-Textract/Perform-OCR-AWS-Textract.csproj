@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.Textract" Version="3.7.100.6" />
-    <PackageReference Include="Syncfusion.PDF.OCR.NET" Version="20.3.0.60" />
+    <PackageReference Include="Syncfusion.PDF.OCR.NET" Version="23.2.6" />
   </ItemGroup>
 
 </Project>
