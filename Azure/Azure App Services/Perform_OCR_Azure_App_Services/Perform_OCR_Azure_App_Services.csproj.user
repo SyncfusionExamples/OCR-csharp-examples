@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <NameOfLastUsedPublishProfile>C:\Users\AshokRajarathinam\Downloads\Perform_OCR_Azure_App_Services\Perform_OCR_Azure_App_Services\Perform_OCR_Azure_App_Services\Properties\PublishProfiles\PerformOCRAzureAppServices20221221162235 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>https</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>D:\SEO team work\Perform_OCR_Azure_App_Services\Perform_OCR_Azure_App_Services\Properties\PublishProfiles\PerformOCRAzureAppServices20240903161932 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -1,16 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Perform_OCR_Azure_App_Services.Models;
-using Syncfusion.OCRProcessor;
-using Syncfusion.Pdf.Parsing;
 using System.Diagnostics;
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
-using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
+
 
 namespace Perform_OCR_Azure_App_Services.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -26,18 +31,12 @@ namespace Perform_OCR_Azure_App_Services.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        //To get content root path of the project
-        private readonly IHostingEnvironment _hostingEnvironment;
-        public HomeController(IHostingEnvironment hostingEnvironment)
-        {
-            _hostingEnvironment = hostingEnvironment;
-        }
         public IActionResult PerformOCR()
         {
             //Initialize the OCR processor with tesseract binaries folder path.
             OCRProcessor processor = new OCRProcessor();
             //Load a PDF document.
-            FileStream stream1 = new FileStream(Path.GetFullPath("../../../Data/Input.pdf"), FileMode.Open);
+            FileStream stream1 = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open);
             PdfLoadedDocument lDoc = new PdfLoadedDocument(stream1);
             //Set OCR language to process.
             processor.Settings.Language = Languages.English;
