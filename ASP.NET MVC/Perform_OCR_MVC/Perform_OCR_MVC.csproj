@@ -47,22 +47,22 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net462\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base, Version=27.1450.53.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\lib\net45\Syncfusion.Compression.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\lib\net462\Syncfusion.Compression.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syncfusion.Licensing, Version=27.1450.53.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\lib\net45\Syncfusion.Licensing.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\lib\net462\Syncfusion.Licensing.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syncfusion.OCRProcessor.Base, Version=27.1450.53.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\lib\net45\Syncfusion.OCRProcessor.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\lib\net462\Syncfusion.OCRProcessor.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syncfusion.Pdf.Base, Version=27.1450.53.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\lib\net45\Syncfusion.Pdf.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\lib\net462\Syncfusion.Pdf.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -259,7 +259,6 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Syncfusion.Pdf.OCR.Wpf.27.1.53\build\net462\Syncfusion.Pdf.OCR.Wpf.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Syncfusion.Pdf.OCR.Wpf.27.1.53\build\net462\Syncfusion.Pdf.OCR.Wpf.targets'))" />
     <Error Condition="!Exists('..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\build\net45\Syncfusion.Pdf.OCR.AspNet.Mvc5.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\build\net45\Syncfusion.Pdf.OCR.AspNet.Mvc5.targets'))" />
   </Target>
   <Import Project="..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\build\net45\Syncfusion.Pdf.OCR.AspNet.Mvc5.targets" Condition="Exists('..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\build\net45\Syncfusion.Pdf.OCR.AspNet.Mvc5.targets')" />
