@@ -254,7 +254,6 @@
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\lib\net462\Syncfusion.Pdf.OCR.AspNet.Mvc5.targets" Condition="Exists('..\packages\Syncfusion.Pdf.OCR.AspNet.Mvc5.27.1.53\lib\net462\Syncfusion.Pdf.OCR.AspNet.Mvc5.targets')" />
-  <Import Project="..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\build\net462\Syncfusion.Pdf.OCR.Wpf.targets" Condition="Exists('..\packages\Syncfusion.Pdf.AspNet.Mvc5.27.1.53\build\net462\Syncfusion.Pdf.OCR.Wpf.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
