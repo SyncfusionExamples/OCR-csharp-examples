@@ -2,7 +2,7 @@
 
 # Perform OCR in Azure App Service using C#
 
-The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to extract text from scanned PDFs and images in Azure with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.  
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Azure with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.  
 
 ## Steps to perform OCR on entire PDF document in Azure App Service on Windows
 

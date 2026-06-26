@@ -1,6 +1,6 @@
 ﻿## Azure Functions
 
-The PDF is a [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) that supports OCR by using the Tesseract open-source engine. Using this library, perform OCR for a PDF document in Azure Functions using .NET Core.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) that supports OCR by using the Tesseract open-source engine. Using this library, perform OCR for a PDF document in Azure Functions using .NET Core.
 
 ### Steps to perform OCR on the entire PDF document in Azure Functions
 
