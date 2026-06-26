@@ -1,20 +1,20 @@
 # OCR-csharp-examples
-The [Syncfusion&reg; .NET Optical Character Recognition (OCR) library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images. With a few lines of C# code, a scanned PDF document containing a raster image is converted into a searchable and selectable PDF document. This repository contains examples of OCR using C# in different platforms. 
+The [Syncfusion&reg; .NET Optical Character Recognition (OCR) library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images. With a few lines of C# code, a scanned PDF document containing a raster image is converted into a searchable and selectable PDF document. This repository contains examples of OCR using C# in different platforms. 
 
 Platform Name | Description 
 --- | ---
-[ASP.NET Core]() | Perform OCR on entire PDF document in ASP.NET Core application. 
-[ASP.NET MVC]() | Perform OCR on entire PDF document in ASP.NET MVC application. 
-[Azure App Service]() | Perform OCR on entire PDF document in Azure App Service. 
-[Azure Functions]() | Perform OCR on entire PDF documnet in Azure Functions. 
-[AWS Textract]() | Performing OCR on entire PDF document with AWS Texteract. 
-[Azure Vision]() | Performing OCR on entire PDF document with Azure Vision. 
-[Blazor]() | Perform OCR on entire PDF document in Blazor application. 
-[Docker]() | Perform OCR on entire PDF document in Dcoker application. 
-[Linux]() | Perform OCR on entire PDF document in Linux OS. 
-[Windows Forms]() | Perform OCR on entire PDF document in Windows Forms application. 
-[WPF]() | Perform OCR on entire PDF document in WPF application. 
-[.NET]() | Perform OCR on entire PDF document in .NET Console application. 
+[ASP.NET Core](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/ASP.NET%20Core) | Perform OCR on entire PDF document in ASP.NET Core application. 
+[ASP.NET MVC](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/ASP.NET%20MVC) | Perform OCR on entire PDF document in ASP.NET MVC application. 
+[Azure App Service](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20App%20Services) | Perform OCR on entire PDF document in Azure App Service. 
+[Azure Functions](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20Function) | Perform OCR on entire PDF documnet in Azure Functions. 
+[AWS Textract](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/AWS%20Textract) | Performing OCR on entire PDF document with AWS Texteract. 
+[Azure Vision](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure%20Vision) | Performing OCR on entire PDF document with Azure Vision. 
+[Blazor](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Blazor) | Perform OCR on entire PDF document in Blazor application. 
+[Docker](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Docker) | Perform OCR on entire PDF document in Dcoker application. 
+[Linux](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Linux) | Perform OCR on entire PDF document in Linux OS. 
+[Windows Forms](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Windows%20Forms) | Perform OCR on entire PDF document in Windows Forms application. 
+[WPF](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/WPF) | Perform OCR on entire PDF document in WPF application. 
+[.NET](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/.NET) | Perform OCR on entire PDF document in .NET Console application. 
 
 # How to run the examples
 * Download this project to a location in your disk. 
@@ -23,11 +23,11 @@ Platform Name | Description
 * Run the application.
 
 # Resources
-*   **Product page:** [Syncfusion&reg; PDF Framework](https://www.syncfusion.com/document-processing/pdf-framework/net)
-*   **Documentation page:** [Syncfusion&reg; .NET PDF library](https://help.syncfusion.com/file-formats/pdf/overview)
-*   **Online demo:** [Syncfusion&reg; .NET PDF library - Online demos](https://ej2.syncfusion.com/aspnetcore/PDF/CompressExistingPDF#/bootstrap5)
+*   **Product page:** [Syncfusion&reg; PDF Framework](https://www.syncfusion.com/document-sdk/net-pdf-library)
+*   **Documentation page:** [Syncfusion&reg; .NET PDF library](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/overview)
+*   **Online demo:** [Syncfusion&reg; .NET PDF library - Online demos](https://document.syncfusion.com/demos/pdf/default#/tailwind)
 *   **Blog:** [Syncfusion&reg; .NET PDF library - Blog](https://www.syncfusion.com/blogs/category/pdf)
-*   **Knowledge Base:** [Syncfusion&reg; .NET PDF library - Knowledge Base](https://www.syncfusion.com/kb/windowsforms/pdf)
+*   **Knowledge Base:** [Syncfusion&reg; .NET PDF library - Knowledge Base](https://support.syncfusion.com/kb/web/section/866)
 *   **EBooks:** [Syncfusion&reg; .NET PDF library - EBooks](https://www.syncfusion.com/succinctly-free-ebooks)
 *   **FAQ:** [Syncfusion&reg; .NET PDF library - FAQ](https://www.syncfusion.com/faq/)
 

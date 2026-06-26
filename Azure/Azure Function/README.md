@@ -1,6 +1,6 @@
 ﻿## Azure Functions
 
-The Syncfusion&reg; PDF is a [.NET Core PDF library](https://www.syncfusion.com/pdf-framework/net-core/pdf-library?_gl=1*jslmpe*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY5MDI5MjcyMi4zNjUuMS4xNjkwMjk0MjA5LjYwLjAuMA..) that supports OCR by using the Tesseract open-source engine. Using this library, perform OCR for a PDF document in Azure Functions using .NET Core.
+The PDF is a [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) that supports OCR by using the Tesseract open-source engine. Using this library, perform OCR for a PDF document in Azure Functions using .NET Core.
 
 ### Steps to perform OCR on the entire PDF document in Azure Functions
 
@@ -23,7 +23,6 @@ Step 4: Copy the tessdata folder from the **bin->Debug->net6.0->runtimes** and p
 Step 5: Then, set Copy to output directory to give copy always the tessdata folder.
 
 <img src="Perform_OCR_Azure_Functions/OCR-Images/Set_Copy_Always.png" alt="Convert OCR Azure Functions Tessdata Store" width="100%" Height="Auto"/>
-
 
 Step 6: Include the following namespaces in the **Function1.cs** file to perform OCR for a PDF document using C#.
 

@@ -1,6 +1,6 @@
 # Perform OCR in Linux
 
-The [Syncfusion&reg; .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from scanned PDFs and images in the Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in the Linux application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 ## Pre-requisites
 
 The following Linux dependencies should be installed where the conversion takes place. 
@@ -13,7 +13,6 @@ sudo apt-get install y- libopenjp2-7
 
 ```
 
-
 ## Steps to convert HTML to PDF in .NET Core application on Linux.
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
@@ -24,7 +23,7 @@ dotnet new console
 
 ```
 
- <img src="Perform_OCR_Linux/Images/LinuxStep1.png" alt="OCR Linux Step1" width="100%" Height="Auto"/>
+<img src="Perform_OCR_Linux/Images/LinuxStep1.png" alt="OCR Linux Step1" width="100%" Height="Auto"/>
 
 Step 2: Install the [Syncfusion.PDF.OCR.Net](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net/) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
 
@@ -46,7 +45,7 @@ OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/")
 
 Step 4: Place the Tesseract language data {E.g eng.traineddata} in the local system and provide a path to the OCR processor. Please use the OCR language data for other languages using the following link.
 
- [Tesseract language data](https://github.com/tesseract-ocr/tessdata)
+[Tesseract language data](https://github.com/tesseract-ocr/tessdata)
 
 ```csharp
 

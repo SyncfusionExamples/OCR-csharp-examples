@@ -1,6 +1,6 @@
 # Perform OCR with Azure Vision 
 
-The [Syncfusion&reg; .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) supports external engines (Azure Computer Vision) to process the OCR on images and PDF documents. 
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) supports external engines (Azure Computer Vision) to process the OCR on images and PDF documents. 
 
 ## Steps to perform OCR with Azure Computer Vision 
 Step 1: Create a new .NET Console application project. 
@@ -188,4 +188,3 @@ class AzureExternalOcrEngine : IOcrEngine
 
 By executing the program, you will get the PDF document as follows. 
 <img src="Perform-OCR-Azure-Vision/OCR_Images/Output.png" alt="Output PDF screenshot" width="100%" Height="Auto"/>
-
