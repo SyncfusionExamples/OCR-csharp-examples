@@ -1,6 +1,6 @@
 # Perform OCR in Docker
 
-The [Syncfusion&reg; .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) is used to extract text from the scanned PDFs and images in the Docker application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from the scanned PDFs and images in the Docker application with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
 ## Steps to perform OCR on entire PDF document in Docker
 Step 1: Create a new ASP.NET Core application project.
@@ -113,6 +113,4 @@ Step 12: Build and run the sample in Docker. It will pull the Linux Docker image
 
 By executing the program, you will get a PDF document as follows.
 
-<img src="Perform_OCR_Docker/Images/OCR-output-image.png" alt="OCR Dockeroutput" width="100%" Height="Auto"/>
-
-  
+<img src="Perform_OCR_Docker/Images/OCR-output-image.png" alt="OCR Dockeroutput" width="100%" Height="Auto"/>  
