@@ -20,7 +20,7 @@ namespace Web_API_Project.Controllers
         }
 
         [HttpGet("/api/Pdf")]
-        public IActionResult ConvertHTMLtoPDF()
+        public IActionResult ConvertOCR()
         {
             using (OCRProcessor processor = new OCRProcessor())
             {
