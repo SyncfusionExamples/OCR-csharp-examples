@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-    <PackageReference Include="Syncfusion.PDF.OCR.Net.Core" Version="34.1.29" />
+    <PackageReference Include="Syncfusion.PDF.OCR.Net.Core" Version="*" />
   </ItemGroup>
 
 </Project>
